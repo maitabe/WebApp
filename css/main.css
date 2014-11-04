@@ -332,7 +332,7 @@ body {
     padding-top: 25px;
 }
 
-.report-form {
+.tab-form {
     width: 95%;
     height: 45px;
     margin: 0 auto;
@@ -342,26 +342,44 @@ body {
     margin-bottom: 9px;
 }
 
-.report-form span {
+.tab-form span {
     margin-left: 18px;
 }
 
-.report-form label {
+.tab-form label {
     margin-left: 51px;
 }
 
-.report-form input[type=text] {
+.tab-form input[type=text] {
     height: 2em;
     width: 32%;
     border: none;
 }
 
-.report-form input[type=text]:last-child {
+.tab-form input[type=text]:last-child {
     width: 43%;
 }
 
-.report-form input[type=button] {
+.tab-form input[type=button] {
     margin-top: 11px;
+}
+
+.form-button {
+  padding: 14px 32px;
+  float: right;
+}
+
+.form-button input[type="button"] {
+	background-color: #000000;
+	color: #fff;
+	border: none;
+	padding: 6px 24px;
+	margin-left: 10px;
+	font-size: 0.9em;
+}
+
+.form-button > a {
+	text-decoration: underline;
 }
 
 /* ==========================================================================
