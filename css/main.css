@@ -294,14 +294,35 @@ body {
     padding-top: 25px;
 }
 
-.icon-tab {
-
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.i-report:before {
-    content: '\F08E';
-
+.fa-external-link:before {
+    content: "\f08e";
 }
+
+.fa-star-o:before {
+    content: "\f006";
+}
+
+.fa-folder-open-o:before {
+    content: "\f115";
+}
+
+.fa-files-o:before {
+    content: "\f0c5";
+}
+
+.fa-cog:before {
+    content: "\f013";
+}
+
 
 .active {
     background-color: darkgrey !important;
@@ -381,6 +402,16 @@ body {
 .form-button > a {
 	text-decoration: underline;
 }
+
+.arrow-diagonal{
+    width: 16px;
+    height: 16px;
+    background: url(../img/expand.png);
+    background-repeat: no-repeat;
+    background-position: ;
+}
+
+
 
 /* ==========================================================================
    Helper classes

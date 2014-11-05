@@ -97,20 +97,31 @@
         <div class="tabs">
             <ul>
                 <li id="onload-tab"onclick="myFunction('quick-reports',this)" class="plain-tab">
-                    <i class="icon-tab .i-report"></i>
+                    <i class="fa fa-external-link"></i>
                     <a>Quick Reports</a>
                 </li>
-                <li onclick="myFunction('fmy-folders',this)" class="plain-tab"><a >My Folders</a>
+                <li onclick="myFunction('fmy-folders',this)" class="plain-tab">
+                    <i class="fa fa-star-o"></i>
+                    <a >My Folders</a>
+
                 </li>
-                <li onclick="myFunction('my-team-folders',this)" class="plain-tab"><a >My Team Folders</a>
+                <li onclick="myFunction('my-team-folders',this)" class="plain-tab">
+                    <i class="fa fa-folder-open-o"></i>
+                    <a >My Team Folders</a>
+
                 </li>
-                <li onclick="myFunction('public-folders',this)" class="plain-tab"><a >Public Folders</a>
+                <li onclick="myFunction('public-folders',this)" class="plain-tab">
+                    <i class="fa fa-files-o"></i>
+                    <a >Public Folders</a>
+
                 </li>
             </ul>
 
             <div id="quick-reports" class="tab-content">
                 <div class="qr-form">
-                    <div class="qr-form-top"></div>
+                    <div class="qr-form-top">
+                        <i class="fa fa-cog"></i>
+                    </div>
                         <div class="qr-form-bottom">
                             <form>
                                 <div class="tab-form">
@@ -144,8 +155,9 @@
                 </div>
             </div>
 
-            <div id="fmy-folders" class="tab-content">
-                <h3>2nd content</h3>
+            <div id="my-folders" class="tab-content">
+                <div class="arrow-diagonal"></div>
+                <iframe src="http://www.netcraft.co.il/" width="80%" height=""></iframe>
             </div>
 
             <div id="my-team-folders" class="tab-content">
