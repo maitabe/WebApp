@@ -3,7 +3,7 @@ window.onload = function ()
 {
 	//myFunction('quick-reports');
 	document.getElementById('onload-tab').click();
-}
+};
 // select each tab -table mechanism-
 function myFunction(selectedId, tabBtn) {
 
@@ -33,3 +33,17 @@ function myFunction(selectedId, tabBtn) {
 	tabBtn.style.background = '#ebebeb';
 }
 
+
+// THIS IS THE BASIS OF THE BASIS
+var items = document.querySelectorAll(".tabs li");
+
+console.log(items);
+
+for (var i = 0; i < items.length; i++) {
+	items[i].addEventListener("click", function() {
+		var name = this.getAttribute("data-name");
+		myFunction(name, this);
+	});
+}
+
+//end of the basis
