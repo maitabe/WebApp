@@ -1,9 +1,29 @@
+
 //initializing
 window.onload = function ()
 {
 	//myFunction('quick-reports');
 	document.getElementById('onload-tab').click();
+debugger;
+
+	//ajax notification data call
+	var options =
+	{
+		done: function(xhr, res)
+		{
+			console.log(xhr);
+			//inject the data to my div
+			var div = document.getElementById('notif-data');
+			div.innerHTML = xhr;
+		}
+	}
+
+	UTILS.ajax('../data/notification.txt', options);
+
+
 };
+
+
 // select each tab -table mechanism-
 function myFunction(selectedId, tabBtn) {
 
@@ -47,3 +67,26 @@ for (var i = 0; i < items.length; i++) {
 }
 
 //end of the basis
+
+var li = document.querySelector('#onload-tab');
+var stop = document.querySelector('stop');
+
+UTILS.addEvent(li, 'click', function(e) {
+	var target = e.target;
+
+	console.log(target);
+	console.log(this);
+	console.log(e.currentTarget);
+	console.log(this === e.currentTarget);
+	console.log(e.preventDefault);
+	console.log(e.stopPropagation);
+});
+
+UTILS.addEvent(stop, 'click', function(e) {
+	//var target = e.target;
+
+	e.preventDefault();
+
+	UTILS.removeEvent(li, 'click', function);
+
+});
