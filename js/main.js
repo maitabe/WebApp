@@ -63,6 +63,7 @@ function makeSaveActions() {
 		option.text = 'name';
 		nameList.add(option);
 
+
 		//hide form once button save its clicked
 	var hideForm = document.querySelector('.qr-form-bottom');
 		hideForm.style.display = 'none';
@@ -70,15 +71,20 @@ function makeSaveActions() {
 		//add iframe tag to the tab
 	var showContainer = document.querySelector('.frame-content');
 		showContainer.style.display = 'block';
+
+	changeFrame(nameList);
 }
 
 function changeFrame(select) {
 
     // get value
 	var selectedOptionValue = select.options[select.selectedIndex].value;
+	console.log(selectedOptionValue);
 
-alert(selectedOptionValue);
+//alert(selectedOptionValue);
    // set value to iframe src
+   var  getContFrame = document.querySelector('#qr-iframe');
+    	getContFrame.src = selectedOptionValue;
 }
 
 
