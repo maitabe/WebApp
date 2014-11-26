@@ -289,6 +289,7 @@ body {
 }
 
 .tab-content {
+    position: relative;
     background-color: #ebebeb;
     height: 1000px;
     clear: both;
@@ -324,7 +325,6 @@ body {
     content: "\f013";
 }
 
-
 .active {
     background-color: darkgrey !important;
 }
@@ -332,30 +332,57 @@ body {
 .qr-form {
     width: 100%;
     height: 50%;
-
+    position: relative;
 }
 
 .qr-form-top {
     width: 3.3%;
     height: 50px;
-    margin-left: 94.2%;
-    background-color: #ffffff;
+    margin-left: 95.2%;
+    background: #ffffff;
     background-image: url(../img/settings.png);
     background-repeat: no-repeat;
     background-position: 9px 11px;
+    cursor: pointer;
+}
+
+.expand-icon{
+    width: 3.3%;
+    height: 50px;
+    background: url(../img/expand.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 16px;
+    left: 93%;
+    display: none;
+    cursor: pointer;
+}
+
+.site-list {
+    background-color: #FFF;
+    position: absolute;
+    top: 0px;
+    left: 1.5%;
+    height: 31px;
+    width: 229px;
+    display:none;
+}
+
+.qr-form select {
+    border: none;
 }
 
 .qr-form-bottom {
-    width: 95%;
+    width: 97%;
     height: 50%;
     margin: 0 auto;
     background-color: #ffffff;
     box-shadow: 7px 8px 8px -6px #999999;
-    padding-top: 25px;
+    padding-top: 20px;
 }
 
 .tab-form {
-    width: 95%;
+    width: 97%;
     height: 45px;
     margin: 0 auto;
     background-color: #cccccc;
@@ -364,12 +391,25 @@ body {
     margin-bottom: 9px;
 }
 
-.tab-form span {
-    margin-left: 18px;
+.tab-form-left {
+    width:  40.6%;
+    float: left;
+}
+
+.tab-form-right {
+     width:  47%;
+     float: left;
+}
+
+.tab-form legend {
+    margin-left: 2%;
+    margin-top: 4px;
+    float: left;
+    margin-right: 4%;
 }
 
 .tab-form label {
-    margin-left: 51px;
+    margin-left: 2%;
 }
 
 .tab-form input[type=text] {
@@ -378,8 +418,14 @@ body {
     border: none;
 }
 
-.tab-form input[type=text]:last-child {
-    width: 43%;
+.tab-form-left input[type=text]:last-child {
+    width: 80%;
+    margin-left: 2%;
+}
+
+.tab-form-right input[type=text]:last-child {
+    width: 89%;
+    margin-left: 1%;
 }
 
 .tab-form input[type=button] {
@@ -405,14 +451,20 @@ body {
 }
 
 .arrow-diagonal{
-    width: 16px;
-    height: 16px;
+    width: 3.3%;
+    height: 50px;
     background: url(../img/expand.png);
     background-repeat: no-repeat;
-    background-position: ;
+    position: absolute;
+    top: 38px;
+    left: 93%;
 }
 
-
+.frame-content {
+    margin-left: 20px;
+    width: 97%;
+    display: none;
+}
 
 /* ==========================================================================
    Helper classes

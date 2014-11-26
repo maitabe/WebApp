@@ -100,17 +100,17 @@
                     <i class="icon-tab .i-report"></i>
                     <a href="#stop">Quick Reports</a>
                 </li>
-                <li onclick="myFunction('fmy-folders',this)" class="plain-tab">
+                <li data-name='my-folders' class="plain-tab">
                     <i class="fa fa-star-o"></i>
                     <a >My Folders</a>
 
                 </li>
-                <li onclick="myFunction('my-team-folders',this)" class="plain-tab">
+                <li data-name='team-folders' class="plain-tab">
                     <i class="fa fa-folder-open-o"></i>
                     <a >My Team Folders</a>
 
                 </li>
-                <li onclick="myFunction('public-folders',this)" class="plain-tab">
+                <li data-name='public-folders' class="plain-tab">
                     <i class="fa fa-files-o"></i>
                     <a >Public Folders</a>
 
@@ -118,40 +118,63 @@
             </ul>
 
             <div id="quick-reports" class="tab-content">
-                <div class="qr-form">
+                    <div class="qr-form">
+                    <select id="drop-history" class="site-list">
+                        <option value="www.google.co.il">Google</option>
+                        <option value="www.yahoo.com">Yahoo</option>
+                    </select>
+                    <div id="arrowBlack" class="expand-icon"></div>
                     <div class="qr-form-top">
                         <i class="fa fa-cog"></i>
                     </div>
                         <div class="qr-form-bottom">
-                            <form>
-                                <div class="tab-form">
-                                    <span>Report 01</span>
-                                    <label for="name">Name</label>
-                                    <input id="name" type="text"> </input>
-                                    <label for="url">URL</label>
-                                    <input id="url" type="text"> </input>
-                                </div>
-                                <div class="tab-form">
-                                    <span>Report 02</span>
-                                    <label for="name">Name</label>
-                                    <input id="name" type="text"> </input>
-                                    <label for="url">URL</label>
-                                    <input id="url" type="text"> </input>
-                                </div>
-                                <div class="tab-form">
-                                    <span>Report 03</span>
-                                    <label for="name">Name</label>
-                                    <input id="name" type="text"> </input>
-                                    <label for="url">URL</label>
-                                    <input id="url" type="text"> </input>
-                                </div>
+                                <form>
+                                <fieldset class="tab-form">
+                                    <legend>Report 01</legend>
+                                    <div class="tab-form-left">
+                                        <label for="name">Name</label>
+                                        <input id="name" type="text"> </input>
+                                    </div>
+                                    <div class="tab-form-right">
+                                        <label for="url">URL</label>
+                                        <input id="url" type="text"> </input>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="tab-form">
+                                    <legend>Report 02</legend>
+                                    <div class="tab-form-left">
+                                        <label for="name">Name</label>
+                                        <input id="name" type="text"> </input>
+                                    </div>
+                                    <div class="tab-form-right">
+                                        <label for="url">URL</label>
+                                        <input id="url" type="text"> </input>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="tab-form">
+                                    <legend>Report 03</legend>
+                                    <div class="tab-form-left">
+                                        <label for="name">Name</label>
+                                        <input id="name" type="text"> </input>
+                                    </div>
+                                    <div class="tab-form-right">
+                                        <label for="url">URL</label>
+                                        <input id="url" type="text"> </input>
+                                    </div>
+                                </fieldset>
                                 <div class="form-button">
                                 <a href="">Cancel</a>
-                                <input  type="button" value="Save"></input>
+                                <input id="item-save" type="button" value="Save"></input>
                                 </div>
-                            </form>
-
+                                </form>
                         </div>
+                            <div class="frame-content">
+                                <iframe src="" id="pageId" width="100%" height="700"
+        frameborder="0" scrolling="no"></iframe>
+                            </div>
+
+
+
                 </div>
             </div>
 
@@ -160,7 +183,7 @@
                 <iframe src="http://www.netcraft.co.il/" width="80%" height=""></iframe>
             </div>
 
-            <div id="my-team-folders" class="tab-content">
+            <div id="team-folders" class="tab-content">
                 <div class="qr-form">
                     <div class="qr-form-top"></div>
                         <div class="qr-form-bottom">
