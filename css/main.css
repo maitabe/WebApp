@@ -335,11 +335,11 @@ body {
     position: relative;
 }
 
-.qr-form-top {
+.setting-icon {
     width: 3.3%;
     height: 50px;
     margin-left: 95.2%;
-    background: #ffffff;
+    background-color: #ffffff;
     background-image: url(../img/settings.png);
     background-repeat: no-repeat;
     background-position: 9px 11px;
@@ -418,16 +418,19 @@ body {
     height: 2em;
     width: 32%;
     border: none;
+    padding-left: 2%;
 }
 
 .tab-form-left input[type=text]:last-child {
     width: 80%;
     margin-left: 2%;
+    padding-left: 2%;
 }
 
 .tab-form-right input[type=text]:last-child {
     width: 89%;
     margin-left: 1%;
+    padding-left: 2%;
 }
 
 .tab-form input[type=button] {
@@ -462,10 +465,15 @@ body {
     left: 93%;
 }
 
-.frame-content {
+.tab-content-top{
+    width: 97%;
+    margin-left: 20px;
+    height: 50px;
+}
+
+.tab-content-body {
     margin-left: 20px;
     width: 97%;
-    display: none;
 }
 
 /* ==========================================================================

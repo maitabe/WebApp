@@ -118,48 +118,46 @@
             </ul>
 
             <div id="quick-reports" class="tab-content">
-                    <div class="qr-form">
-                    <select id="drop-history" class="site-list">
-                        <option value="http://www.netcraft.co.il">Netcraft</option>
-                        <option value="http://www.yahoo.com">Yahoo</option>
-                    </select>
-                    <div id="arrowBlack" class="expand-icon"></div>
-                    <div class="qr-form-top">
-                        <i class="fa fa-cog"></i>
-                    </div>
+                <div class="qr-form">
+                        <select id="drop-history" class="site-list">
+                            <!-- <option value="http://www.netcraft.co.il">Netcraft</option>
+                            <option value="https://www.yahoo.com">Yahoo</option> -->
+                        </select>
+                        <div id="arrowBlack" class="expand-icon"></div>
+                        <div class="setting-icon"></div>
                         <div class="qr-form-bottom">
                                 <form>
                                 <fieldset class="tab-form">
                                     <legend>Report 01</legend>
                                     <div class="tab-form-left">
                                         <label for="name">Name</label>
-                                        <input id="name" type="text"> </input>
+                                        <input id="name-qr1" type="text"> </input>
                                     </div>
                                     <div class="tab-form-right">
                                         <label for="url">URL</label>
-                                        <input id="url" type="text"> </input>
+                                        <input id="url-qr1" type="text" > </input>
                                     </div>
                                 </fieldset>
                                 <fieldset class="tab-form">
                                     <legend>Report 02</legend>
                                     <div class="tab-form-left">
                                         <label for="name">Name</label>
-                                        <input id="name" type="text"> </input>
+                                        <input id="name-qr2" type="text"> </input>
                                     </div>
                                     <div class="tab-form-right">
                                         <label for="url">URL</label>
-                                        <input id="url" type="text"> </input>
+                                        <input id="url-qr2" type="text"> </input>
                                     </div>
                                 </fieldset>
                                 <fieldset class="tab-form">
                                     <legend>Report 03</legend>
                                     <div class="tab-form-left">
                                         <label for="name">Name</label>
-                                        <input id="name" type="text"> </input>
+                                        <input id="name-qr3" type="text" > </input>
                                     </div>
                                     <div class="tab-form-right">
                                         <label for="url">URL</label>
-                                        <input id="url" type="text"> </input>
+                                        <input id="url-qr3" type="text" > </input>
                                     </div>
                                 </fieldset>
                                 <div class="form-button">
@@ -168,19 +166,20 @@
                                 </div>
                                 </form>
                         </div>
-                            <div class="frame-content">
+                        <div class="tab-content-body">
                                 <iframe src="" id="qr-iframe" width="100%" height="700"
-        frameborder="0" scrolling="no"></iframe>
-                            </div>
-
-
-
+                                    frameborder="0" scrolling="no"></iframe>
+                        </div>
                 </div>
             </div>
 
             <div id="my-folders" class="tab-content">
-                <div class="arrow-diagonal"></div>
-                <iframe src="http://www.netcraft.co.il/" width="80%" height=""></iframe>
+                <div class="tab-content-top">
+                    <div class="arrow-diagonal"></div>
+                </div>
+                <div class="tab-content-body">
+                    <iframe src="http://www.paulirish.com/" width="100%" height="700px" frameborder="0" scrolling="no"></iframe>
+                </div>
             </div>
 
             <div id="team-folders" class="tab-content">

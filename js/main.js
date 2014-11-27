@@ -37,21 +37,38 @@ window.onload = function ()
 	var saveContent = document.querySelector('#item-save');
 		saveContent.addEventListener('click', makeSaveActions);
 
-	var openWindow = document.querySelector('#arrowBlack');
-		openWindow.addEventListener('click', makeSaveActions);
+	//show arrow-expand with save button
+	var showArrow = document.querySelector('#arrowBlack');
+		showArrow.addEventListener('click', makeSaveActions);
+
+	var closeForm = document.querySelector('.qr-form-bottom')
+		closeForm.click()
 
 	// add event change to drop down menu in quick reports tab
 	var changeEvent = document.querySelector('#drop-history');
 		changeEvent.addEventListener('change', function(){changeFrame(this)});
 
+
+
 //end of window onload
 };
 
 function makeSaveActions() {
+
+		//get value of input first line
+	var  nameForm1 = document.querySelector('#name-qr1').value;
+	var  urlForm1 = document.querySelector('#url-qr1').value;
+
+	var  nameForm2 = document.querySelector('#name-qr2').value;
+	var  urlForm2 = document.querySelector('#url-qr2').value;
+
+	var  nameForm3 = document.querySelector('#name-qr3').value;
+	var  urlForm3 = document.querySelector('#url-qr3').value;
+
+
 	//display arrow expand
 	var expandArrow = document.querySelector('#arrowBlack');
 		expandArrow.style.display = 'block';
-		// expandArrow.window.open('url');
 
 		//show menu drop down
 	var historyList = document.querySelector('.site-list');
@@ -59,8 +76,23 @@ function makeSaveActions() {
 
 		//show menu drop down with name history
 	var nameList = document.querySelector('#drop-history');
+
+	// 1st
 	var option = document.createElement('option');
-		option.text = 'name';
+		option.text = nameForm1;
+		option.value = urlForm1;
+		nameList.add(option);
+
+	//2nd
+	var option = document.createElement('option');
+		option.text = nameForm2;
+		option.value = urlForm2;
+		nameList.add(option);
+
+	//3rd
+	var option = document.createElement('option');
+		option.text = nameForm3;
+		option.value = urlForm3;
 		nameList.add(option);
 
 
@@ -68,11 +100,15 @@ function makeSaveActions() {
 	var hideForm = document.querySelector('.qr-form-bottom');
 		hideForm.style.display = 'none';
 
+
 		//add iframe tag to the tab
-	var showContainer = document.querySelector('.frame-content');
+	var showContainer = document.querySelector('.tab-content-body');
 		showContainer.style.display = 'block';
 
 	changeFrame(nameList);
+
+
+
 }
 
 function changeFrame(select) {
@@ -81,11 +117,11 @@ function changeFrame(select) {
 	var selectedOptionValue = select.options[select.selectedIndex].value;
 	console.log(selectedOptionValue);
 
-//alert(selectedOptionValue);
    // set value to iframe src
    var  getContFrame = document.querySelector('#qr-iframe');
     	getContFrame.src = selectedOptionValue;
 }
+
 
 
 // select each tab -table mechanism-
