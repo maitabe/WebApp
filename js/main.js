@@ -51,6 +51,9 @@ window.onload = function ()
 	var openTarget = document.querySelector('#arrowBlack');
 		openTarget.addEventListener('click', targetBlank);
 
+	var toggleClose = document.querySelector('#toggle-icon')
+		toggleClose.addEventListener('click', toggleHide);
+
 
 //end of window onload
 };
@@ -83,35 +86,46 @@ function makeSaveActions() {
 	var option = document.createElement('option');
 		option.text = nameForm1;
 		option.value = urlForm1;
-		nameList.add(option);
+		//nameList.add(option);
+
+		if (nameForm1 != '' && urlForm1 != '') {
+				nameList.add(option);
+			}
 
 	//2nd
 	var option = document.createElement('option');
 		option.text = nameForm2;
 		option.value = urlForm2;
-		nameList.add(option);
+		//nameList.add(option);
 
+		if (nameForm2 != '' && urlForm2 != '') {
+				nameList.add(option);
+			}
 	//3rd
 	var option = document.createElement('option');
 		option.text = nameForm3;
 		option.value = urlForm3;
-		nameList.add(option);
+		//nameList.add(option);
+
+		if (nameForm3 != '' && urlForm3 != '') {
+				nameList.add(option);
+			}
 
 
 		//hide form once button save its clicked
 	var hideForm = document.querySelector('.qr-form-bottom');
 		hideForm.style.display = 'none';
 
+		var hideBgToggle = document.querySelector('#toggle-icon');
+		hideBgToggle.style.backgroundColor = 'transparent';
 
 		//add iframe tag to the tab
 	var showContainer = document.querySelector('.tab-content-body');
 		showContainer.style.display = 'block';
 
 	changeFrame(nameList);
-
-
-
 }
+
 
 function changeFrame(select) {
 
@@ -128,6 +142,15 @@ function targetBlank(){
 	//open window of iframe target blank
 	 var  getContFrame = document.querySelector('#qr-iframe');
 	 window.open( getContFrame.src,'_blank');
+}
+
+	// hide form once toggle is clicked
+function toggleHide() {
+	var closeContentForm = document.querySelector('.qr-form-bottom');
+		closeContentForm.style.display = 'none';
+
+	var hideBgToggle = document.querySelector('#toggle-icon');
+		hideBgToggle.style.backgroundColor = 'transparent';
 }
 
 // select each tab -table mechanism-
