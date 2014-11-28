@@ -48,6 +48,8 @@ window.onload = function ()
 	var changeEvent = document.querySelector('#drop-history');
 		changeEvent.addEventListener('change', function(){changeFrame(this)});
 
+	var openTarget = document.querySelector('#arrowBlack');
+		openTarget.addEventListener('click', targetBlank);
 
 
 //end of window onload
@@ -122,7 +124,11 @@ function changeFrame(select) {
     	getContFrame.src = selectedOptionValue;
 }
 
-
+function targetBlank(){
+	//open window of iframe target blank
+	 var  getContFrame = document.querySelector('#qr-iframe');
+	 window.open( getContFrame.src,'_blank');
+}
 
 // select each tab -table mechanism-
 function changeActiveTab(selectedId, tabBtn) {
