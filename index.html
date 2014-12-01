@@ -118,14 +118,17 @@
             </ul>
 
             <div id="quick-reports" class="tab-content">
-                <div class="qr-form">
-                        <select id="drop-history" class="site-list">
+                <div class="qr-content-top">
+                    <select id="drop-history" class="site-list">
                             <!-- <option value="http://www.netcraft.co.il">Netcraft</option>
                             <option value="https://www.yahoo.com">Yahoo</option> -->
-                        </select>
-                        <div id="arrowBlack" class="expand-icon"></div>
-                        <div id="toggle-icon" class="setting-icon"></div>
-                        <div class="qr-form-bottom">
+                    </select>
+                    <div id="arrowBlack" class="expand-icon"></div>
+                    <div id="bkgd-icon" class="setting-bkgd"></div>
+                    <div id="toggle-icon" class="setting-icon"></div>
+                </div>
+                <div class="qr-content-body">
+                    <div class="qr-form-bottom">
                                 <form>
                                 <fieldset class="tab-form">
                                     <legend>Report 01</legend>
@@ -165,11 +168,10 @@
                                 <input id="item-save" type="button" value="Save"></input>
                                 </div>
                                 </form>
-                        </div>
-                        <div class="tab-content-body">
-                                <iframe src="" id="qr-iframe" width="100%" height="700"
-                                    frameborder="0" scrolling="no"></iframe>
-                        </div>
+                    </div>
+                    <iframe src="" id="qr-iframe" width="100%" height="700"
+                                    frameborder="0" scrolling="no">
+                    </iframe>
                 </div>
             </div>
 

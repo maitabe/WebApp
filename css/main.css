@@ -329,31 +329,43 @@ body {
     background-color: darkgrey !important;
 }
 
-.qr-form {
-    width: 100%;
-    height: 50%;
+.qr-content-top{
+    width: 97%;
+    margin-left: 1.65%;
+    height: 50px;
     position: relative;
 }
 
 .setting-icon {
-    width: 3.3%;
-    height: 50px;
-    margin-left: 95.2%;
-    background-color: #ffffff;
+    width: 51px;
+    height: 51px;
+    margin-left: 94.8%;
     background-image: url(../img/settings.png);
     background-repeat: no-repeat;
-    background-position: 9px 11px;
+    background-position: 14px 14px;
     cursor: pointer;
+    position: absolute;
+    top: 0px;
+    left: 15px;
+}
+
+.setting-bkgd{
+    background-color: #FFF;
+    margin-left: 95.2%;
+    position: absolute;
+    left: 14px;
+    width: 3.6%;
+    height: 50px;
 }
 
 .expand-icon{
-    width: 3.3%;
-    height: 50px;
+    width: 2.3%;
+    height: 34px;
     background: url(../img/expand.png);
     background-repeat: no-repeat;
     position: absolute;
     top: 16px;
-    left: 93%;
+    left: 94%;
     display: none;
     cursor: pointer;
 }
@@ -362,10 +374,11 @@ body {
     background-color: #FFF;
     position: absolute;
     top: 0px;
-    left: 1.5%;
+    left: 0%;
     height: 31px;
     width: 229px;
     display:none;
+    border: none;
 }
 
 .qr-form select {
@@ -373,12 +386,15 @@ body {
 }
 
 .qr-form-bottom {
-    width: 97%;
-    height: 50%;
+    width: 100%;
+    height: 255px;
     margin: 0 auto;
     background-color: #ffffff;
     box-shadow: 7px 8px 8px -6px #999999;
     padding-top: 20px;
+    position: absolute;
+    top:0;
+    left: 0;
 }
 
 .tab-form {
@@ -465,17 +481,33 @@ body {
     left: 93%;
 }
 
-.tab-content-top{
-    width: 97%;
+/*.tab-content-top{
+    width: 100%;
+    height: 50%;
+
+}*/
+
+.qr-content-body {
     margin-left: 20px;
-    height: 50px;
+    width: 97%;
+    position: relative;
 }
 
-.tab-content-body {
-    margin-left: 20px;
-    width: 97%;
+
+
+    /*key frames sections */
+
+@-moz-keyframes spin {
+   from { -moz-transform: rotate(0deg); }
+   to { -moz-transform: rotate(360deg); }
 }
 
+.spin-animation{
+   -moz-animation-name: spin;
+   -moz-animation-duration: 2s;
+   -moz-animation-iteration-count: infinite;
+   -moz-animation-timing-function: linear;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */

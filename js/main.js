@@ -33,6 +33,10 @@ window.onload = function ()
 	var firstTab =  document.querySelector('#onload-tab');
 		firstTab.click();
 
+	// hide iframe once the page initialize
+	var hideFrame = document.querySelector('#qr-iframe');
+		hideFrame.style.display = "none";
+
 	// adding event listener to save button
 	var saveContent = document.querySelector('#item-save');
 		saveContent.addEventListener('click', makeSaveActions);
@@ -55,10 +59,13 @@ window.onload = function ()
 		toggleClose.addEventListener('click', toggleHide);
 
 
+
 //end of window onload
 };
 
 function makeSaveActions() {
+
+	var isValidated = false;
 
 		//get value of input first line
 	var  nameForm1 = document.querySelector('#name-qr1').value;
@@ -71,59 +78,71 @@ function makeSaveActions() {
 	var  urlForm3 = document.querySelector('#url-qr3').value;
 
 
-	//display arrow expand
-	var expandArrow = document.querySelector('#arrowBlack');
-		expandArrow.style.display = 'block';
-
-		//show menu drop down
-	var historyList = document.querySelector('.site-list');
-		historyList.style.display = 'block';
-
 		//show menu drop down with name history
 	var nameList = document.querySelector('#drop-history');
 
+
 	// 1st
-	var option = document.createElement('option');
-		option.text = nameForm1;
-		option.value = urlForm1;
-		//nameList.add(option);
 
 		if (nameForm1 != '' && urlForm1 != '') {
+			var option = document.createElement('option');
+				option.text = nameForm1;
+				option.value = urlForm1
 				nameList.add(option);
+				isValidated = true;
 			}
 
 	//2nd
-	var option = document.createElement('option');
-		option.text = nameForm2;
-		option.value = urlForm2;
-		//nameList.add(option);
 
 		if (nameForm2 != '' && urlForm2 != '') {
+			var option = document.createElement('option');
+				option.text = nameForm2;
+				option.value = urlForm2;
 				nameList.add(option);
+				isValidated = true;
 			}
+
 	//3rd
-	var option = document.createElement('option');
-		option.text = nameForm3;
-		option.value = urlForm3;
-		//nameList.add(option);
-
+		//do not add option element if name and url are not populated
 		if (nameForm3 != '' && urlForm3 != '') {
+				var option = document.createElement('option');
+				option.text = nameForm3;
+				option.value = urlForm3;
 				nameList.add(option);
+				isValidated = true;
 			}
 
+		//make sure the screen wont change if the form inputs are not fill
+		if (isValidated == true) {
 
-		//hide form once button save its clicked
-	var hideForm = document.querySelector('.qr-form-bottom');
-		hideForm.style.display = 'none';
+				//hide form once button save its clicked
+			var hideForm = document.querySelector('.qr-form-bottom');
+				hideForm.style.display = 'none';
 
-		var hideBgToggle = document.querySelector('#toggle-icon');
-		hideBgToggle.style.backgroundColor = 'transparent';
+			var hideBgToggle = document.querySelector('#bkgd-icon');
+				hideBgToggle.style.backgroundColor = 'transparent';
 
-		//add iframe tag to the tab
-	var showContainer = document.querySelector('.tab-content-body');
-		showContainer.style.display = 'block';
+				//show menu drop down
+			var historyList = document.querySelector('.site-list');
+				historyList.style.display = 'block';
 
-	changeFrame(nameList);
+				//display arrow expand
+			var expandArrow = document.querySelector('#arrowBlack');
+				expandArrow.style.display = 'block';
+
+				//add iframe tag to the tab
+			var showContainer = document.querySelector('.qr-content-body');
+				showContainer.style.display = 'block';
+
+				// hide iframe once the page initialize
+			var hideFrame = document.querySelector('#qr-iframe');
+				hideFrame.style.display = "block";
+
+			changeFrame(nameList);
+
+		}
+
+
 }
 
 
@@ -146,11 +165,21 @@ function targetBlank(){
 
 	// hide form once toggle is clicked
 function toggleHide() {
-	var closeContentForm = document.querySelector('.qr-form-bottom');
-		closeContentForm.style.display = 'none';
 
-	var hideBgToggle = document.querySelector('#toggle-icon');
-		hideBgToggle.style.backgroundColor = 'transparent';
+	var closeContentForm = document.querySelector('.qr-form-bottom');
+	var hideBgToggle = document.querySelector('#bkgd-icon');
+
+		//if form is hidden - show it
+	if(closeContentForm.style.display == 'none') {
+			closeContentForm.style.display = 'block';
+				hideBgToggle.style.backgroundColor = '#ffffff';
+		//if form show - hide it
+	}else if(closeContentForm.style.display == 'block') {
+				closeContentForm.style.display = 'none';
+				hideBgToggle.style.backgroundColor = 'transparent';
+	}
+
+
 }
 
 // select each tab -table mechanism-
