@@ -216,6 +216,7 @@ body {
     float: left;
     background-color: #ebebeb;
     font-size: 0.9em;
+    z-index: 999999;
 }
 
 .menu-hint {
@@ -241,6 +242,7 @@ body {
 .action-list {
     padding: 0;
     display: none;
+    z-index: -1;
 }
 
 .action-list li {

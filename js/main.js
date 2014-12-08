@@ -306,10 +306,13 @@ if( nameForm3 	 !== '' ||  urlForm3 !== '' ){
 		// hide all tabs
 		for ( i = 0; i < defaultTabs.length; i++) {
 		 	defaultTabs[i].style.background = 'darkgrey';
+		 	defaultTabs[i].style.color = '#f0f0f0';
 		}
 
 		// color selected tab
 		tabBtn.style.background = '#ebebeb';
+		tabBtn.style.color = '#000000';
+		window.location.hash = '#' + selectedId;
 	};
 
 
