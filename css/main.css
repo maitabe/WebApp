@@ -458,7 +458,7 @@ body {
   float: right;
 }
 
-.form-button input[type="button"] {
+.form-button input[type="submit"] {
 	background-color: #000000;
 	color: #fff;
 	border: none;
@@ -467,8 +467,8 @@ body {
 	font-size: 0.9em;
 }
 
-.form-button > a {
-	text-decoration: underline;
+.form-button > div {
+	display: inline-block;
 }
 
 .arrow-diagonal{

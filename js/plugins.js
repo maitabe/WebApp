@@ -30,6 +30,35 @@
 var UTILS = (function () {
 
 	return {
+		addClass: function (elm, className) {
+			var currentClassName = elm.className,
+				classes = currentClassName.split(' ');
+
+			for (var i = 0; i < classes.length; i++) {
+				// If the classname already exists
+				if (classes[i] === className) {
+					return;
+				}
+			}
+
+			elm.className = currentClassName + ' ' + className;
+		},
+		removeClass: function (elm, className) {
+			var currentClassName = elm.className,
+				classes = currentClassName.split(' ');
+
+			for (var i = 0; i < classes.length; i++) {
+				// If the classname already exists
+				if (classes[i] === className) {
+					// Remov the class
+					classes.splice(i, 1);
+					// Update the elm class name
+					elm.className = classes.join(' ');
+					// Stop
+					return;
+				}
+			}
+		},
 		qs: function (selector) {
 			return document.querySelector(selector);
 		},

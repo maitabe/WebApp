@@ -134,38 +134,38 @@
                                     <legend>Report 01</legend>
                                     <div class="tab-form-left">
                                         <label for="name">Name</label>
-                                        <input id="name-qr1" type="text"> </input>
+                                        <input id="name-qr1" type="text" required placeholder="Name"> </input>
                                     </div>
                                     <div class="tab-form-right">
                                         <label for="url">URL</label>
-                                        <input id="url-qr1" type="text" > </input>
+                                        <input id="url-qr1" type="text" required placeholder="http://www"> </input>
                                     </div>
                                 </fieldset>
                                 <fieldset class="tab-form">
                                     <legend>Report 02</legend>
                                     <div class="tab-form-left">
                                         <label for="name">Name</label>
-                                        <input id="name-qr2" type="text"> </input>
+                                        <input id="name-qr2" type="text" required placeholder="Name"> </input>
                                     </div>
                                     <div class="tab-form-right">
                                         <label for="url">URL</label>
-                                        <input id="url-qr2" type="text"> </input>
+                                        <input id="url-qr2" type="text" required placeholder="http://www"> </input>
                                     </div>
                                 </fieldset>
                                 <fieldset class="tab-form">
                                     <legend>Report 03</legend>
                                     <div class="tab-form-left">
                                         <label for="name">Name</label>
-                                        <input id="name-qr3" type="text" > </input>
+                                        <input id="name-qr3" type="text" required placeholder="Name"> </input>
                                     </div>
                                     <div class="tab-form-right">
                                         <label for="url">URL</label>
-                                        <input id="url-qr3" type="text" > </input>
+                                        <input id="url-qr3" type="text" required placeholder="http://www"> </input>
                                     </div>
                                 </fieldset>
                                 <div class="form-button">
-                                <a href="">Cancel</a>
-                                <input id="item-save" type="button" value="Save"></input>
+                                <div id="cancelButton">Cancel</div>
+                                <input id="item-save" type="submit" value="Save"></input>
                                 </div>
                                 </form>
                     </div>
@@ -175,16 +175,16 @@
                 </div>
             </div>
 
-            <div id="my-folders" class="tab-content">
+            <div id="my-folders" class="tab-content hidden">
                 <div class="tab-content-top">
                     <div class="arrow-diagonal"></div>
                 </div>
                 <div class="tab-content-body">
-                    <iframe src="http://www.paulirish.com/" width="100%" height="700px" frameborder="0" scrolling="no"></iframe>
+                    <!-- <iframe src="http://www.paulirish.com/" width="100%" height="700px" frameborder="0" scrolling="no"></iframe> -->
                 </div>
             </div>
 
-            <div id="team-folders" class="tab-content">
+            <div id="team-folders" class="tab-content hidden">
                 <div class="qr-form">
                     <div class="qr-form-top"></div>
                         <div class="qr-form-bottom">
@@ -211,7 +211,7 @@
                                     <input id="url" type="text"> </input>
                                 </div>
                                 <div class="form-button">
-                                <a href="">Cancel</a>
+                                <div id="cancelButton">Cancel</div>
                                 <input  type="button" value="Save"></input>
                                 </div>
                             </form>
@@ -220,25 +220,17 @@
                 </div>
             </div>
 
-            <div id="public-folders" class="tab-content">
+            <div id="public-folders" class="tab-content hidden">
                 <h3>4th content</h3>
             </div>
         </div>
     </div>
 
+		<!--
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+         -->
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
     </body>
 </html>
