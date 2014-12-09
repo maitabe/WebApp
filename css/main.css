@@ -432,26 +432,26 @@ body {
     margin-left: 2%;
 }
 
-.tab-form input[type=text] {
+.tab-form input {
     height: 2em;
     width: 32%;
     border: none;
     padding-left: 2%;
 }
 
-.tab-form-left input[type=text]:last-child {
+.tab-form-left input:last-child {
     width: 80%;
     margin-left: 2%;
     padding-left: 2%;
 }
 
-.tab-form-right input[type=text]:last-child {
+.tab-form-right input:last-child {
     width: 89%;
     margin-left: 1%;
     padding-left: 2%;
 }
 
-.tab-form input[type=button] {
+.tab-form input[type=submit] {
     margin-top: 11px;
 }
 
