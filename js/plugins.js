@@ -1,5 +1,6 @@
 // Avoid `console` errors in browsers that lack a console.
 (function() {
+	'use strict';
     var method;
     var noop = function () {};
     var methods = [
@@ -28,6 +29,7 @@
  */
 
 var UTILS = (function () {
+	'use strict';
 
 	return {
 		addClass: function (elm, className) {
